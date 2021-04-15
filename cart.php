@@ -59,7 +59,7 @@ if (isset($action) && $action === 'Confirm') {
             $total += $rowTotal;
         ?>
         <tr>
-            <td><?php echo "<span class='h6 m-5'>" . $product['name'] . "</span>"; ?></td>
+            <td><?php echo "<span class='h4 m-5'>" . $product['name'] . "</span>"; ?></td>
             <td><?php echo "<span class='h6 m-2'>" . $rowTotal . "</span>"; ?></td>
             <td>
                 <?php if ($amount < 1) {?>
