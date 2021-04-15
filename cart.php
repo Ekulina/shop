@@ -3,12 +3,21 @@
 require_once('autoload.php');
 
 $msg = filter_input(INPUT_GET, 'msg', FILTER_SANITIZE_STRING);
+if (isset($msg)){
+    if ($msg = "success") {
+        $_SESSION['cart'] = [];
+        echo '<div class="alert alert-info">';
+        echo 'Thank you for your purches!';
+        echo '</div>';
+    } elseif ($msg = "cancel") {
+        echo '<div class="alert alert-info">';
+        echo 'Paiment was canceled!';
+        echo '</div>';
+    }
 
-if (isset($msg) && !empty($msg)) {
-    echo '<div class="alert alert-info">';
-    echo 'Product was deleted!';
-    echo '</div>';
+
 }
+
 
 if (isset($_SESSION['cart']) && count($_SESSION['cart']) < 1 || !isset($_SESSION['cart'])) {
     echo "<div class='h5'>Shopping cart is empty!</div>";
@@ -47,7 +56,7 @@ if (isset($action) && $action === 'Confirm') {
 <body class="p-5">
     <div class="m-5 d-flex flex-column justify-content-center">
     <?php if (!empty($products) && isset($_SESSION['cart'])) : foreach ($_SESSION['cart'] as $id => $amount) { ?>
-        <table class="bg-light m-1 border-bottom" width="100%">
+        <table id="" class=" m-1 border-bottom" width="100%">
             <tr>
                 <th width="20%"></th>      
                 <th width="55%"></th>      
@@ -63,16 +72,16 @@ if (isset($action) && $action === 'Confirm') {
             <td><?php echo "<span class='h6 m-2'>" . $rowTotal . "</span>"; ?></td>
             <td>
                 <?php if ($amount < 1) {?>
-                    <a class="btn btn-secondary">-</a>
+                    <a class="btn btn-warning">-</a>
                 <?php } else if ($amount == 1) { ?>
-                    <a class="btn btn-secondary" href="delete.php?id=<?php echo $product['id']; ?>">-</a>
+                    <a class="btn btn-warning" href="delete.php?id=<?php echo $product['id']; ?>">-</a>
                 <?php } else { ?>
-                    <a class="btn btn-secondary" href="decrease.php?id=<?php echo $product['id']; ?>">-</a>
+                    <a class="btn btn-warning" href="decrease.php?id=<?php echo $product['id']; ?>">-</a>
                 <?php } ?>
                 <?php echo "<span class='h6 m-2'>" . $amount . "</span>"; ?>
-                <a class="btn btn-secondary" href="increase.php?id=<?php echo $product['id']; ?>">+</a>
+                <a class="btn btn-warning" href="increase.php?id=<?php echo $product['id']; ?>">+</a>
             </td>
-            <td><img class="img-thumbnail" src="<?php echo $product['image']; ?>"></td>
+            
             <td><a class="btn btn-danger m-5" href="delete.php?id=<?php echo $product['id']; ?>">Delete</a></td>
         </tr>
     </table>
@@ -82,7 +91,7 @@ if (isset($action) && $action === 'Confirm') {
 <div class="m-5">
     <?php echo "<div class='d-flex align-items-end flex-column m-3'>
                     <div class='h4'>Total:  " . $total . " €</div>
-                    <a class='btn btn-primary' href='/hajus4/shop'>Back to Shopping</a>
+                    <a class='btn btn-warning' href='/shop'>Back to Shopping</a>
                 </div>"; 
     ?>
     
@@ -93,13 +102,13 @@ if (isset($action) && $action === 'Confirm') {
     } else {
 ?>
     
-    <form method="post" class="d-flex flex-column m-5">
+    <form id="nimi" method="post" class="d-flex flex-column m-5 w-50 p-3">
         <div class="form-group">
             <label>First Name</label>
             <input class="form-control" type="text" name="fname" value="<?php if (isset($action)) { echo $_POST['fname']; } ?>">
         </div>
         <div class="form-group">
-            <label>Surname</label>
+            <label>Lastname</label>
             <input class="form-control" type="text" name="sname" value="<?php if (isset($action)) { echo $_POST['sname']; } ?>">
         </div>
         <div class="form-group">
@@ -111,11 +120,15 @@ if (isset($action) && $action === 'Confirm') {
             <input class="form-control" type="text" name="phone" value="<?php if (isset($action)) { echo $_POST['phone']; } ?>">
         </div>
         <input type="hidden" name="total" value="<?php echo $total; ?>">
-        <input class="btn btn-success" type="submit" name="submit" value="Confirm">
+        <input class="btn btn-warning mt-5" type="submit" name="submit" value="Confirm">
     </form>
 
 <?php } ?>
 <?php } ?>
 
 </body>
+<style>
+body {
+    background-color: lightblue;}
+</style>
 </html>
