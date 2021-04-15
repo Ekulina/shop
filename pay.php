@@ -85,7 +85,7 @@ $data = str_pad (mb_strlen($fields["VK_SERVICE"], "UTF-8"), 3, "0", STR_PAD_LEFT
 
 openssl_sign ($data, $signature, $private_key, OPENSSL_ALGO_SHA1);
 
-/* ldVaV6IKwh18TNVK0F9ED5qUi87Kn9mnDBv4mswNt/x9v0N+cF/fnEwHc4TGXg1/Z2E17TsGO/gbdKNGUPUz7TWChdS3u1Zoxm0fETojBYFQvEhtA+AxCThmArTvVpYqfHAUAQhbeFBBcw8uUDV4XhR4MGQaiuTK8MRAxrTkbbmDZoYvMOqWEDlf85lejps1bi3cKg8TKdiBAzgGgAsp2LtH0bRs24LlMYM4r92aD4mdR7qGVkxkd9e+zEkBvBqQ//OLjjepSUJe+tFD9dYa6I80ab3CSofBcaUjSSu1itstPbUJPE8eNSM5Mgbo5+LzYIYwGt0Qt/3XwUP/E+msuA== */
+/* Qopr7bAf/hwPrc/+lg2zxEU8vMS7ccgMXQsfdAoFGX7QaDZPuKxPpYUN+8my+rvKRlqNO/s1Kvg0PlSsBGKi4+cnApJNBN1X1i3eV1J7CkcwkT4Ea6a8wv138iT0vF+UZRj7E5gBFV/uV2RYzVLEpUcZPjb2c0SmiBh+49g44O0/5kiYmUnC1fH2oA4soeG8ty8npfMFJcdqpN0F5gphgoe19Zt4dM7tIL6N5ODjhAO/DU4x/DUN1xHsqbLWFzmwGdcRslhvzVPVOLAzv+eZmb35zGgjsdss4jV4wjB23ihAm9izAIXS2JK60yP2ZV5HkquIPe+IpeH7YelpPogefg== */
 $fields["VK_MAC"] = base64_encode($signature);
 
 // STEP 5. Generate POST form with payment data that will be sent to the bank
