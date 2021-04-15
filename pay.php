@@ -10,36 +10,33 @@
 // =========================
 
 $private_key = openssl_pkey_get_private(
-"-----BEGIN RSA PRIVATE KEY-----
-MIIEowIBAAKCAQEAmRWOgbwQ8s6h9V9qHWd0mT2/6ZK02HArgtvbJSrmb6XT8+0U
-a9lgdpjFWN2CLFMGUKOBii4C8EFgUqXfaY0FA9pKgMrrMC0z/HlP3CLJEbXy0Huy
-RwfK1amiuz0hWYyXENZk4erDqEaUoGypDJAu5Qa2LRPXNFDkHq3tAeNt467+I/20
-ZztMlZImvtuMJSKcASlZ9YjJ6I5US0T8b5V+QRYFayUGyk8cIHOrLs2Yug9x71aZ
-AUpiI0WmQTVnUjUoJ100Q6zvL4MuhPBa9LaD6NZdiXLbC2K0mSVs81htDcYVyYUS
-3GwBykd3EHthOdCJQY/C5XrJXuAPeHwYdTe5rQIDAQABAoIBAF2+kq8lwOc/3HRL
-gssQ4Jk69DwP6Akm365Z/mBLXiP+08XrZ/cHfggCU8+wjhegnBxjlF9O/+Oq1Van
-VyHnBqwuUDOAj/fHpq80htASyTi8SD6dkTXoMrEXGZ05uSOCcbwQ3mRuhHSXDEsV
-X4xe+yirLIJ8ROw3oQqcjaf7Yv7q5ybmDeLDA6aIGMrRJ2D43MSzo4Fyqbegp9xj
-ZFrPzz5xSfculyk3trCSKfbHPdEMAFZjuvOPBH0m71jEpzlknDEH7JQm/N9ObnkC
-kzt8eC5GIZJXG9LOgHv5sRNzvghslAKbPMLwgwsHgj+Bokga6j6DBDjIoBQzWFpS
-59ypQsECgYEAxq1h9plsdvzX1G/B69sw/9C6sVZpxZ79HhPKIIyyodgUKVFxUmEa
-Qwx5SMFKPOp2n/EY4bDwTHtCkEmD9JUHXYahDNErci93WxKiOV5ONQTrVFL9lN9r
-TokszjXnPe9oArVfDI54EvFqGXpxskHp6RZwbHk+c60whNUm5MVEbV0CgYEAxUCZ
-C2jTcY+YUgxJ+4R6/ENPlhWRXkcJ8khGDpPE3HWozYjckkrC4pSjospHT7B7fPe9
-m9AlEFQ0bc/QHhKwB6mU5Sbrf0tvaBuXdC+kAmdjrdVjQMNYhTG4YQLz9Xw1Vjh+
-SR1lUOyIi4aqaubmcD3rRo27T9OjJoGBI0ioaJECgYAEXMQ85OuDxVN736RTaHGv
-/EZNJIeYBkCqi2axxkUZ1qPCsH4bf/RSqpBzL4NQyRkns+SG+Bqeo0o33tVd5nPN
-8unQXTtl+3LUdhlHxzFSarQ8GsJkpW82vz5TnM1iB8Kx5Iecv/gU+mYI/y5F6rqX
-Gp4HU7YyVggtsnxzI324JQKBgQCI2t7UebBqU/ScyIX0CeDCcXkgampnfOY7wUVK
-C+BEDSZHJDPVFCXOys4Vvj5n3cxv0fstxeZRQ/r0TYDZvKGBT3lM3An8UbxEARC9
-vegO+ui/zROF9YLPNsX0GPZmVf0zixKja8/Fq7a5B3/pl7Y+HdfFJcTWB8Jkjumo
-L1sY4QKBgCGgQDYtbt0iMEBVytOPQODAUB5DfVYoe8XJINIZcqbGsJHyefQzw0ny
-YJRSIKNG+DUlsNRinPY6GjjiPLvZiDkIKjimS3v/+t05TEzEZ+L0B9zycsTbOa6w
-9BaEuwjATY/WOneTj5nd99uPfrqaiOTfWo/p1c84Mc3xDL3TJmMR
------END RSA PRIVATE KEY-----");
-
-// STEP 2. Define payment information
-// ==================================
+    "-----BEGIN RSA PRIVATE KEY-----
+    MIIEogIBAAKCAQEAqYk6XYl4I/mPYooczssrwd0KxtyBikfjQxdSLyUC6TcRVj99
+    qEeBq9//8yJRFQHrqXadxFzQA6V0aX68aW+fEJKqyQHga/HhQzwyE+bKf8wrStbP
+    4nFe/XI0g5ZXuXW+3bN/4OiZTpYwh2HTVE8DtOuguKXMnlCTZPEU3uRFe5MHtUV1
+    2xCFyx3d3QYHwjarAo6DPsnLGbYue3A1CGEemHKiLWc2vvVqHy2/KOdf4xSZ6rUB
+    +2vqThMk7Ov7Fhgk7vKGLHQZT3+2WSvRl9b4gFmWU2MUrHLIkFwW57T7cRmElOQL
+    RvQoJzH8S8jzn66SMlHqj+JJFZS5lsnjQLNC2QIDAQABAoIBADN+jQ3QLX+v0494
+    p9tf9sCBpT5Vx7r6rtq4AKx1L3cq1Mc/rakpXweXmCR/beVVmgD1GGKGVmBlJwDM
+    D+pujv/3rIw1V7cx1twXMpa86RD8MMIgkTAUg2e0AqNdTPP2Aa1RUiw8OiSWldLp
+    MclP3q5bS4wKQCZuDvcACvjQmRI5TfENCwhlqfWt8VOP5DRjSkLLF004MaKKKllF
+    BWhK8I0PBeBrPFaPH52ctvbzZ3MapIxG4u6sjTeknJQLWHijOkg0YdK5ELytVH1H
+    xgXLu/79L30NBnaYZLeNeNcEB5EBQ+wSigm7RTde8UP/TG72czvjplP0JUl4AKpi
+    9VpfmQECgYEA09SXp4GpnGCVEYngk0pkL1MwGRLQR8EIpSyoIvY8ZhOvnw0u3nWC
+    ZcYr/CHfAHT/yh+sf4M0KyT/ZbV3yPEL07ZowgjDHmwQWkJ80QfjqGMcufC7zKvy
+    Sl+m5G6+9iROKX8qLQeq0Af1BlzgyiEs/lBfrT2nyBOjDMHBBjV7KRECgYEAzOL7
+    LGRZop1v8FckoofTvDEjlv/RgY/tzSqtcNXf+9SHGKK9QrxGNX2np3V/yipHpAEb
+    Fx3Dl7O9mta+jF+yE5nU7Bhwm4tdphRqskyXLvNf6Y0p2MOVdtxKFx/7NXY+6Gdo
+    3yTatN0BOoTNC/aV65y4UDSXi9C5MLlP9ZcTvUkCgYBPkv4BS8EWYGW/N+coDXsD
+    GCHqWVnqioYf3l2u/IcF5YFEo2Qm50e7yaz+Qw8NkeYA3NMk93mid3yFjZzY3EwQ
+    FObXdQkvJXMjJPTUZT1NJSZGZzt1EGatL693Am8z8cF27zE9xzKQgVy3Li63X60S
+    P8khQBcGHvJSOXq0RWTlsQKBgAsoXUdYm60IZ90t0bfsL7Ky9l41xkIJBYlDxrg7
+    XXxIYacMzcPBnw0wr52l/3SSAt7ClKgYnds4FZ5GDZB1cawxl2/YEOHXoBz4Ras6
+    Eo2jAVklr963H/+eFYbW3gZWTyy23PYx+psY4gU+0C/TmOyA12S+yHX7wuoNXXZh
+    aNjJAoGAcpJIk8uNNclbRM3GINruvvy363UWBw/FJGpvccSNZzXy8yCsZLTgAlVv
+    xRR0cTlEjxfNX+jZGSkE8hj4coavcsU9Yqitw4h4qxdwKVL8I7RgEUUt14e9fgaN
+    kaP1RRYFoR/wQ2WzjfFEvOmVrkHUBYdqh2RSuW3iM4DCG/pZtHc=
+    -----END RSA PRIVATE KEY-----");
 
 $fields = array(
         "VK_SERVICE"     => "1011",
@@ -53,8 +50,8 @@ $fields = array(
         "VK_REF"         => "1234561",
         "VK_LANG"        => "EST",
         "VK_MSG"         => $_POST['email'] . "_" . $_POST['phone'],//message
-        "VK_RETURN"      => "http://localhost/hajus4/shop/?msg=success",//success
-        "VK_CANCEL"      => "http://localhost/hajus4/shop/?msg=cancel",//Cancel
+        "VK_RETURN"      => "http://localhost/hajusrakendused/shop/?msg=success",//success
+        "VK_CANCEL"      => "http://localhost/hajusrakendused/shop/?msg=cancel",//Cancel
         "VK_DATETIME"    => date('Y-m-d\TH:i:sO'),
         "VK_ENCODING"    => "utf-8",
 );
