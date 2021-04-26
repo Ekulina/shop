@@ -2,7 +2,7 @@
 require_once 'autoload.php';
 
 echo "<pre>";
-$id = filter_input(INPUT_GET, 'id', FILTER_VALIDATE_INT);
+$id = $_GET["id"];//filter_input(INPUT_GET, 'id', FILTER_VALIDATE_INT);
 
 if (!isset($products[$id])) {
     //redirect to...
@@ -15,7 +15,6 @@ if (!isset($_SESSION['cart'][$id])) {
 }
 
 unset($_SESSION['cart'][$id]);
-
-?><meta http-equiv="refresh" content="0;url=cart.php?msg=deleted" />
-<?php
-exit;
+header("Location: cart.php?msg=deleted");
+exit();
+?>

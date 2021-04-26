@@ -4,17 +4,21 @@ require_once('autoload.php');
 
 $msg = filter_input(INPUT_GET, 'msg', FILTER_SANITIZE_STRING);
 if (isset($msg)){
-    if ($msg = "success") {
+    if ($msg === "success") {
         $_SESSION['cart'] = [];
         echo '<div class="alert alert-info">';
         echo 'Thank you for your purches!';
         echo '</div>';
-    } elseif ($msg = "cancel") {
+    } elseif ($msg === "cancel") {
         echo '<div class="alert alert-info">';
         echo 'Paiment was canceled!';
         echo '</div>';
     }
-
+    elseif ($msg === "deleted") {
+        echo '<div class="alert alert-info">';
+        echo 'Product deleted!';
+        echo '</div>';
+    }
 
 }
 
@@ -40,7 +44,6 @@ if (isset($action) && $action === 'Confirm') {
         echo "<span class='alert alert-danger d-flex justify-content-center'>You need to fill all the input fields!</span>";
     }
 }
-
 
 ?>
 
