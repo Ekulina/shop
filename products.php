@@ -24,42 +24,42 @@ return  [
     ],
     '4' =>[
             
-        'id' => 3,
+        'id' => 4,
         'name' => 'Lill4',
         'price' => 4.50,
         'image' => 'https://picsum.photos/150/150'. '?' . rand()
     ],
     '5' =>[
             
-        'id' => 3,
+        'id' => 5,
         'name' => 'Lill5',
         'price' => 22.50,
         'image' => 'https://picsum.photos/150/150'. '?' . rand()
     ],
     '6' =>[
             
-        'id' => 3,
+        'id' => 6,
         'name' => 'Lill6',
         'price' => 28.50,
         'image' => 'https://picsum.photos/150/150'. '?' . rand()
     ],
     '7' =>[
             
-        'id' => 3,
+        'id' => 7,
         'name' => 'Lill7',
         'price' => 30.00,
         'image' => 'https://picsum.photos/150/150'. '?' . rand()
     ],
     '8' =>[
             
-        'id' => 3,
+        'id' => 8,
         'name' => 'Lill8',
         'price' => 1.50,
         'image' => 'https://picsum.photos/150/150'. '?' . rand()
     ],
     '9' =>[
             
-        'id' => 3,
+        'id' => 9,
         'name' => 'Lill9',
         'price' => 2.00,
         'image' => 'https://picsum.photos/150/150'. '?' . rand()

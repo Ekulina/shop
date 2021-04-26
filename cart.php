@@ -91,7 +91,7 @@ if (isset($action) && $action === 'Confirm') {
 <div class="m-5">
     <?php echo "<div class='d-flex align-items-end flex-column m-3'>
                     <div class='h4'>Total:  " . $total . " €</div>
-                    <a class='btn btn-warning' href='/shop'>Back to Shopping</a>
+                    <a class='btn btn-warning' href='/'>Back to Shopping</a>
                 </div>"; 
     ?>
     
