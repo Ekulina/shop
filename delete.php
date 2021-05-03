@@ -1,7 +1,7 @@
 <?php
 require_once 'autoload.php';
 
-echo "<pre>";
+
 $id = $_GET["id"];//filter_input(INPUT_GET, 'id', FILTER_VALIDATE_INT);
 
 if (!isset($products[$id])) {
